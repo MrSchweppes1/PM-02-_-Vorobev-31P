@@ -28,7 +28,7 @@ namespace PM_02___Vorobev_31P
     public class crit
     {
         public int max, maxind;
-        string str = "";
+        public string str = "";
         public List<List<Path>> result = new List<List<Path>>();//лист функций и путей
         public List<Path> Lway; //лист путей
         public List<Path> Ldata = FileRead();//лист исходных данных 
@@ -257,17 +257,20 @@ namespace PM_02___Vorobev_31P
             Debug.WriteLine(max);
 
 
-            // Запись в файл
-            string date = DateTime.Now.ToString("dd-MMMM-yyyy-hh-mm");
-            using (StreamWriter sw = new StreamWriter("Вывод " + date + ".csv", false, Encoding.Default, 10))
-            {
-                foreach (Path rb in result[maxind])
+            // Выбор
+            //using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            //{
+                string date = DateTime.Now.ToString("dd-MMMM-yyyy-hh-mm");
+                using (StreamWriter sw = new StreamWriter("Вывод " + date + ".csv", false, Encoding.Default, 10))
                 {
-                    string s = (rb.point1 + " - " + rb.point2);
-                    sw.WriteLine(s);
+                    foreach (Path rb in result[maxind])
+                    {
+                        string s = (rb.point1 + " - " + rb.point2);
+                        sw.WriteLine(s);
+                    }
+                    sw.WriteLine(max);
                 }
-                sw.WriteLine(max);
-            }
+            //}
         }
 
     }
