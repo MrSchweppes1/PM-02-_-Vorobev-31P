@@ -49,5 +49,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Файлы\Вариантов исп.png" />
+    <Content Include="Файлы\Деятельности.png" />
+    <Content Include="Файлы\Классов.png" />
+    <Content Include="Файлы\Компонентов.png" />
+    <Content Include="Файлы\Последовательности.png" />
+    <Content Include="Файлы\Потоков данных.png" />
+    <Content Include="Файлы\Развертывания.png" />
+    <Content Include="Файлы\Решение задачи.png" />
+    <Content Include="Файлы\Состояний.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
